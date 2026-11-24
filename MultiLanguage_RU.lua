@@ -1,6 +1,13 @@
 local addonName = ...
 local optionsFrame = CreateFrame("Frame")
 
+if MultiLanguage_SetLanguageFont then
+    MultiLanguage_SetLanguageFont("ru", {
+        body = "Fonts\\FRIZQT___CYR.TTF",
+        title = "Fonts\\MORPHEUS_CYR.TTF",
+    })
+end
+
 local function languageExists(value)
     for _, language in ipairs(MultiLanguageOptions.AVAILABLE_LANGUAGES) do
         if language.value == value then
